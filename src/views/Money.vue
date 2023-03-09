@@ -1,10 +1,5 @@
 <template>
-  <div class="nav-wrapper">
-    <div class="content">
-      <p>money.vue</p>
-    </div>
-    <Nav/>
-  </div>
+  <layout>这是首页，是在money.vue写的，本内容应该能被插到layout页面</layout>
 </template>
 
 <script>
@@ -13,17 +8,3 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.nav-wrapper{
-  border: 1px solid red;
-  background-color: #42b983;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-.content{
-  background-color: coral;
-  overflow: auto;
-  flex-grow: 1;
-}
-</style>
