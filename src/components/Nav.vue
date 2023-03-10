@@ -1,28 +1,46 @@
 <template>
-  <div>
-    <router-link to="/money">
+  <nav>
+    <router-link to="/money" class="item" active-class="selected">
       <Icon name="money"/>
       记账
-    </router-link>|
-    <router-link to="/labels">
+    </router-link>
+    <router-link to="/labels" class="item" active-class="selected">
       <Icon name="label"/>
       标签
-    </router-link>|
-    <router-link to="/statistics">
+    </router-link>
+    <router-link to="/statistics" class="item" active-class="selected">
       <Icon name="statistics"/>
       统计
     </router-link>
-  </div>
+  </nav>
 </template>
 
 <script lang="ts">
-import x from '@/assets/icons/money.svg'
-import y from '@/assets/icons/label.svg'
-import z from '@/assets/icons/statistics.svg'
-console.log(x)
-console.log(y)
-console.log(z)
 export default {
-  name: "Nav"
+  name: "Nav",
 }
 </script>
+
+<style lang="scss" scoped>
+nav {
+  display: flex;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  flex-direction: row;
+  font-size: 12px;
+  > .item {
+    padding: 2px 0;
+    width: 33.33333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  > .item.selected{
+    color: red;
+  }
+}
+</style>
